@@ -1,0 +1,175 @@
+\documentclass[12pt]{report}
+\usepackage{changepage}
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}
+\usepackage[nottoc]{tocbibind}
+\usepackage{tocloft}
+\usepackage{lipsum}
+%\usepackage[tmargin=2cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2cm]{geometry}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage[round]{natbib}
+\usepackage{graphicx}
+\usepackage[parfill]{parskip}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage[textsize=tiny]{todonotes}
+\usepackage{listings}
+\usepackage[title,titletoc,toc]{appendix}
+\usepackage{titlesec}
+\usepackage[acronym, toc]{glossaries} %Lager en merkelig S i starten av dokumentet
+\usepackage{memhfixc}
+
+
+\setcounter{secnumdepth}{5}
+
+
+\lstset{language=SQL,morekeywords={PREFIX,,rdf,rdfs,master}}
+%\renewcommand*{\glossarymark}[1]{}
+\newcommand{\ot}[1]{\todo[color=green!40]{#1}}
+\newcommand{\ob}{\todo[color=green!40]{Blabla}}
+
+\setlist[description]{style=nextline}
+
+%Fjerne første side, den inneholder en S fra \usepackage{glossaries}
+\usepackage{atbegshi}
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+
+\lstset{
+  numbers=left,
+  stepnumber=1,    
+  firstnumber=1,
+  numberfirstline=true
+}
+
+
+%\usepackage{natbib}
+%\bibliographystyle{abbrvnat}
+%\setcitestyle{authoryear,open={((},close={))}}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+%\setlength{\arrayrulewidth}{1mm}
+\renewcommand{\arraystretch}{1.5}
+%\usepackage[backend=biber]{biblatex}
+%\addbibresource{references.bib}
+%\renewcommand{\bibname}{References}
+
+% Leaders for chapter entries
+%\renewcommand\cftchapdotsep{\cftdotsep}
+
+
+
+\title{Semantisk webteknologi for klinisk farmasi: Evaluering av støttesystem ved legemiddelgjennomgang for pasienter med nedsatt nyrefunksjon}
+\author{Håvard Moås, Espen Rise Halstensen, Frode Rennemo}
+
+
+\spacing{1.5}
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+
+\addto{\captionsnorsk}{\renewcommand*{\appendixname}{Vedlegg}}
+
+
+
+\input{chapters/forkortelser.tex}
+
+\begin{document}
+
+
+\maketitle
+
+
+
+
+
+\pagestyle{plain} 
+\pagenumbering{roman}
+
+
+
+%\frontmatter
+
+\chapter*{Forord}
+%\addcontentsline{toc}{kapittel}{\numberline{}Sammendrag}%
+
+\chapter*{Sammendrag}
+\input{chapters/sammendrag}
+%\addcontentsline{toc}{kapittel}{\numberline{}Sammendrag}%
+\newpage
+
+\tableofcontents
+
+\chapter*{Ordliste}
+\input{chapters/ordliste}
+\addcontentsline{toc}{chapter}{Ordliste}
+
+
+%Forkortelser
+
+\printnoidxglossary[title=Forkortelser,type=\acronymtype]
+
+
+\renewcommand{\listtablename}{Tabelliste}
+\listoftables
+
+\renewcommand{\listfigurename}{Figurliste}
+\listoffigures
+
+
+\chapter{Innledning}
+\setcounter{page}{0}
+\pagenumbering{arabic}
+\input{chapters/Innledning}
+
+
+\chapter{Legemiddelgjennomgang}
+\input{chapters/legemiddelgjennomgang}
+
+
+\chapter{Bakgrunn} % Kalle dette dagens situasjon?
+\input{chapters/bakgrunn}
+
+\chapter{Sektorkontakt og empiri}
+\input{chapters/sektorkontakt_og_empiri}
+
+\chapter{Plan og valg}
+\input{chapters/plan_og_valg}
+
+
+\chapter{Gjennomføring}
+\input{chapters/gjennomforing}
+
+
+\chapter{Resultat og analyse}
+\label{chap:res_og_anal}
+\input{chapters/resultat_og_analyse}
+
+
+\chapter{Diskusjon}
+\input{chapters/diskusjon}
+
+
+\chapter{Konklusjon}
+\input{chapters/konklusjon}
+
+
+\chapter{Videre arbeid}
+\input{chapters/videre_arbeid}
+
+
+\bibliographystyle{plainnat}
+\bibliography{bib/bibl}
+
+
+
+
+\input{chapters/vedlegg.tex}
+
+\end{document}

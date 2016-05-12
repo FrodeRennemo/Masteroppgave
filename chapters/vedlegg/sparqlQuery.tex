@@ -1,0 +1,38 @@
+
+\begin{lstlisting}[captionpos=b, caption=SPARQL query, label=lst:sparql,
+   basicstyle=\tiny,frame=single]
+PREFIX    rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX   rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX master:<http://www.semanticweb.org/espenrh/ontologies/2016/2/untitled-ontology-3#>
+
+SELECT ?label ?val ?strength ?sourceURL 
+?sourceText ?recType ?id WHERE {  
+{  select ?substance where {
+     ?drug master:hasSubstance ?substance . 
+     ?drug rdfs:label ?label . 
+     filter(lcase(str(?label)) = lcase(str("{0}")))
+  }}
+    UNION 
+{  select ?substance where {
+     ?substance rdf:type master:Substance .
+     ?substance rdfs:label ?label .
+      filter(lcase(str(?label)) = lcase(str("{0}")))
+  }}
+  
+    ?substance master:hasRecommandation ?rec .
+    ?rec master:upperGFR ?upperGFR .
+    ?rec master:lowerGFR ?lowerGFR .
+
+    filter (?upperGFR > {1})                       
+    filter(?lowerGFR <= {1}) 
+
+    ?substance rdfs:label ?label .
+    ?rec master:recValue ?val .
+    ?rec master:strengthOfRecommandation ?strength .
+    ?rec master:hasSource ?source .
+    ?rec master:recType ?recType .
+    ?rec master:recID ?id .
+    ?source master:sourceURL ?sourceURL .
+    ?source master:sourceText ?sourceText 
+   }
+\end{lstlisting}

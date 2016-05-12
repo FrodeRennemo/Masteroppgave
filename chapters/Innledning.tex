@@ -1,0 +1,65 @@
+Utførelsen av legemiddelgjennomgang er et svært viktig tiltak for å bidra til redusering av legemiddelrelaterte problemer. ''Legemiddelrelaterte problemer forekommer hyppig og påfører pasientene betydelig sykelighet og i noen tilfeller død, samt økte utgifter for samfunnet.'' \citep{norske_legeforening}. 
+
+Tittelen på masteroppgaven er: ''Semantisk webteknologi for klinisk farmasi: Evaluering av støttesystem ved legemiddelgjennomgang for pasienter med nedsatt nyrefunksjon''. Med \textit{støttesystem} mener vi et system som skal bidra med forslag til tiltak for å redusere legemiddelrelaterte problem. Systemet er basert på \textit{semantisk webteknologi}. Med semantisk webteknologi åpnet det seg muligheter for delbarhet og gjenbruk. Formålet med å evaluere støttesystemet var å identifisere om tiltakene gir en effekt under \textit{legemiddelgjennomgang}. \textit{Kliniske farmasøyter} er farmasøyter med tilleggsutdanning som gjør at de sitter med kompetanse til å kvalitetssikre legemiddelbruk. Dette er en yrkesgruppe som støttesystemet vil kunne være et hjelpemiddel for.
+
+
+Dette kapittelet utgreier mål, motivasjon, forskningsspørsmål og begrensninger for oppgaven.
+
+\section{Motivasjon}
+\subsection{Feil i legemiddelhåndteringsprosessen}
+Legemiddelbruk kan være skadelig, og legemiddelrelaterte problemer er svært utbredt i Norge. Over 1000 norske pasienter dør hvert år som følge av bivirkninger og uheldig bruk av legemidler\citep{apotekforeningen_fakta_om_legemiddelbruk}. Feil legemiddelbruk trenger ikke å være direkte skadelig, men det er mulig at bruk av andre legemidler fører til en bedre legemiddelbehandling.  
+
+Mindre optimal legemiddelbruk kan det være flere årsaker til. Legemiddelbruk er uten samlet kontroll og ofte mindre koordinert mellom ulike institusjoner. Dårlig koordinering mellom helseinstitusjoner kan føre til utilsiktede hendelser som konsekvens av legemiddelrelaterte problemer. Videre kan multifarmasi være en årsak til mindre optimal legemiddelbruk. Pasienter med flere kroniske sykdommer, og som derfor tar flere legemidler samtidig, har økt\citep{Uijen_Lisdonk}. Ved multifarmasi øker sannsynligheten for dårligere etterlevelse \citep{Ulfvarson}. Med etterlevelse menes det å ta legemidler som forskrevet.
+
+En systematisk gjennomgang av en pasients legemidler kan eliminere konsekvensene knyttet til et fragmentert helsevesen, og forbedre legemiddelbehandlingen. En norsk studie ble det observert at 81\% av pasientene hadde minst et legemiddelrelatert problem.\citep{81prosent_LRP} For å bedre legemiddelbehandlingen ble det i 2004 foreslått pilotprosjekter for legemiddelgjennomganger. \citep{Helsedirektoratet_veileder_LMG} I 2014 ble det økt satsning på å få kliniske farmasøyter på avdelingene ved St. Olavs. I dag er det ca. 10 årsverk med kliniske farmasøyter som jobber ved St. Olavs hospital i Trondheim og i løpet av året skal det ansettes 5 til.
+
+
+\subsection{Informasjonssøking er problematisk}
+Flere studier har vist at klinisk helsepersonell har et stort behov for å finne relevant klinisk informasjon, og at søken etter dette er problematisk \citep{Information_Needs_Information_Seeking_PHC}\citep{Information_Needs_Being_Met}\citep{IR_Patterns_Surgeons}. Studiene peker både på mangel av relevant informasjon men også mangel på søkeferdigheter som årsak. I de senere tiår har volumet av informasjon økt betraktelig, også innenfor helsesektoren. Søking og filtrering av relevant informasjon blir krevende når volumet og antall kilder øker. Videre har dette ført til økning av tvilsom informasjon og verktøy ment brukt innenfor helsesektoren \citep{Rating_Health_Information}. Ukritisk bruk av informasjon og verktøy på internett kan være skadelig både for pasienter og helsepersonell. 
+
+Etter samtaler med kliniske farmasøyter og forskere i dette feltet, har det kommet frem at det er ingen enighet om hvilke informasjonskilder til legemidler man benytter seg av. Med andre ord vil valg av informasjonskilder gå på personlige preferanser. Informasjonskildene i bruk er mange og det er et stort spenn i innhold, fokus og målgruppe.
+
+\subsection{Semantisk webteknologi gir nye muligheter}
+Semantisk web er en utvidelse av den tradisjonelle verdensveven der informasjonen er gitt en veldefinert mening. Ved å ha standardiserte formater og utvekslingsprotokoller, kan kunnskap bli delt og gjenbrukt på tvers av applikasjoner.
+Dette kan igjen tilrettelegge for resonnering med kunnskapspresentasjoner. 
+
+\citet{monitor_bipolar_semanticweb} og \citet{semanticweb_clinical_guideline} har sett nytte i å bruke semantiske teknologier innenfor helse-og biovitenskap. Her er det store problemer med heterogene data som er spredt over ulike domener. Samtidig vokser datamengden. Forskere og andre må kunne foreta spørringer som går på tvers av disse for å kunne ta kritiske avgjørelser. Bruk av semantiske teknologier kan redusere kostnadene ved en slik integrasjon av datakilder. W3C opprettet Semantic Web for Health Care and Life Sciences Interest Group for å utvikle, støtte samt være en pådriver for bruken av semantiske teknologier i helse-og biovitenskap\citep{W3C_HCLSIG}.
+
+
+\section{Forskningsspørsmål}
+\label{innled:forskningsporsmal}
+%Å sette seg inn i et komplekst domene som helsesektoren, har vært en lang og krevende prosess\ot{Vær konsise og direkte. Dette er bortforklaringer.}. Siden vi hadde begrenset kunnskap om problemområdet til å begynne med, var forskningsspørsmålene våre vage og omfattende. Disse kunne ikke besvares uten ytterligere konkretisering. Med tiden fikk vi en økt forståelse for domenet, som førte til mer og mer konkrete forskningsspørsmål samt ytterligere innsnevringer. 
+
+%I starten av masteroppgaven var målet å utvikle en komplett kunnskapspresentasjon med tilhørende grensesnitt, altså et ferdigutviklet system. Etterhvert forsto vi at vi ikke hadde tid til å ferdigstille et system samt gjennomføre et forsøk. På grunnlag av dette ble problemområdet innskrenket til å fokusere på pasienter med nedsatt nyrefunksjon, men samtidig beholde forskningsspørsmålene vi hadde utviklet underveis. Dette ga oss muligheten til å utvikle et Proof-of-concept, som lar oss demonstrere konseptet\ot{løsning, idé - konsept er et konsulentord}, designmuligheter og samtidig besvare forskningsspørsmålene. Selv om systemutvikling ikke er forskning i seg selv, så vi det som nødvendig å lage et system for å gjøre et forsøk så virkelighetsnært som mulig.\ot{prototyp for å teste idé/teori = forskning og del av metoden!} 
+
+Overordnet forskningsspørsmål:
+
+\begin{enumerate}
+    \item Kan et system  basert på semantisk web-teknolgi hjelpe farmasøyter til å gjøre legemiddelgjennomgang slik at den blir 
+    \begin{itemize}
+        \item mer presis,
+        \item raskere gjennomført
+        \item og lærerik.
+    \end{itemize}
+\end{enumerate}
+
+Som del av dette må vi også besvare følgende underordnede spørsmål:
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item Hvordan kan vi gjennomføre et eksperiment for å besvare spørsmål 1? Hvilke forskningsmetoder passer vårt behov og våre ressurser?
+\item Hvilke kunnskapskilder og hva slags type teknologi er relevant og tilstrekkelig?
+\item Hva betyr, og hvordan måles, presisjon, effektivitet og læreeffekt av legemiddelgjennomgang?
+\end{enumerate}
+\section{Utvikling av prototype}
+Vi utviklet en prototype i form av en webapplikasjon, der brukeren foretok legemiddelgjennomgang basert på to kasuistikker. Formålet med prototypen var å bruke det i et eksperiment for å besvare forskningsspørsmålet. I eksperimentet sammenlignet vi bruk av prototypen med og uten forslag til tiltak tilgjengelig. Forslag til tiltak ble gitt der nedsatt nyrefunksjon påvirket pasientens opptak av legemidler\ot{Må vi argumentere for hvorfor vi fokuserer på nedsatt nyrefunksjon? }. Nedsatt nyrefunksjoner er et av punktene det er viktig å ta hensyn til under en legemiddelgjennomgang\citep{Helsedirektoratet_veileder_LMG}. 
+
+
+
+%For å kunne besvare forskningsspørsmålet ble en prototype utviklet. Prototypen var en webapplikasjon der legemiddelgjennomgang ble foretatt elektronisk. I denne masteroppgaven har vi fokusert på den delen av legemiddelgjennomgang som går på nyrefunksjon. Nedsatt nyrefunksjon er en av de punktene det er viktig å ta hensyn til under en legemiddelgjennomgang\citep{Helsedirektoratet_veileder_LMG}. Vi har laget et system vi kan bruke som et verktøy for å få svar på forskningsspørsmålene. Prototypen tar hensyn til legemidler i bruk fra kasuistikkene vi har lagt inn og gir anbefalinger til bruker ut i fra den aktuelle nyrefunksjonen til pasienten. Prototypen skal brukes til et forsøk der kliniske farmasøyter gjennomfører legemiddelgjennomgang elektronisk. 
+
+\section{Begrensninger\ot{skal vi ha dette?}}
+Her presenteres begrensninger valgt for masteroppgaven.
+\subsection{Personvern}
+Vi har ikke sett lagring av reelle persondata som nødvendig hverken i utviklingen av prototypen eller i gjennomføring av forsøk. På dette viset har vi unngått potensielle problemstillinger knyttet til personvern. Det er likevel svært viktig at et ferdigutviklet system tar hensyn til problemstillinger relatert til personvern. Problemstillinger knyttet til personvern er diskutert i \ref{Personvern}.
+
+ 

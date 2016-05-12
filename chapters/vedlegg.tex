@@ -1,0 +1,37 @@
+\pagenumbering{gobble}
+\newgeometry{right=1cm,left=1cm,top=0cm,bottom=0cm}
+\titleformat{\chapter}[hang] 
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter:}{1em}{} 
+
+\begin{appendices}
+
+
+\chapter{Sparql Query}\label{vedlegg:sparqlquery}
+\input{chapters/vedlegg/sparqlQuery}
+
+
+\chapter{Milepæleplan}\label{vedlegg:milep}
+\input{chapters/vedlegg/milepaele}
+
+\chapter{Kasuistikk - Inger} \label{vedlegg:kasus_inger}
+\input{chapters/vedlegg/kasuistikk_inger}
+
+\chapter{Kasuistikk - Magne} \label{vedlegg:kasus_magne}
+\input{chapters/vedlegg/kasuistikk_magne}
+
+
+\chapter{Informasjonsskriv til deltagere}\label{vedlegg:informasjonsskriv}
+\begin{adjustwidth}{2cm}{2cm}
+\input{chapters/vedlegg/informasjonsskriv}
+ \end{adjustwidth} 
+
+\chapter{Spørreundersøkelse - Magne kasuistikk}\label{vedlegg:magne}
+\input{chapters/vedlegg/magne}
+
+\chapter{Spørreundersøkelse - Inger kasuistikk}\label{vedlegg:inger}
+\input{chapters/vedlegg/inger}
+
+
+
+\end{appendices}
+\restoregeometry
